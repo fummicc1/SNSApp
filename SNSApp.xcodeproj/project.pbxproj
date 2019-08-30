@@ -15,6 +15,9 @@
 		D3BAF20D23177133003493FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BAF20B23177133003493FC /* Main.storyboard */; };
 		D3BAF20F23177134003493FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BAF20E23177134003493FC /* Assets.xcassets */; };
 		D3BAF21223177134003493FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BAF21023177134003493FC /* LaunchScreen.storyboard */; };
+		D3C5044F2318A4B4000A3441 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C5044E2318A4B4000A3441 /* AddViewController.swift */; };
+		D3C504512318D909000A3441 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C504502318D909000A3441 /* Post.swift */; };
+		D3C504552318DBF8000A3441 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C504542318DBF8000A3441 /* AppUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		D3BAF20E23177134003493FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3BAF21123177134003493FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3BAF21323177134003493FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3C5044E2318A4B4000A3441 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		D3C504502318D909000A3441 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D3C504542318DBF8000A3441 /* AppUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		D6053414705B3FBBFA7D8723 /* Pods-SNSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSApp.release.xcconfig"; path = "Target Support Files/Pods-SNSApp/Pods-SNSApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,8 +90,11 @@
 			children = (
 				D3782896231775B1006C2175 /* GoogleService-Info.plist */,
 				D3BAF21323177134003493FC /* Info.plist */,
-				D3BAF20723177133003493FC /* AppDelegate.swift */,
 				D3782898231778EF006C2175 /* AccountViewController.swift */,
+				D3C5044E2318A4B4000A3441 /* AddViewController.swift */,
+				D3BAF20723177133003493FC /* AppDelegate.swift */,
+				D3C504542318DBF8000A3441 /* AppUser.swift */,
+				D3C504502318D909000A3441 /* Post.swift */,
 				D378289A23177F33006C2175 /* TimelineViewController.swift */,
 				D3BAF20E23177134003493FC /* Assets.xcassets */,
 				D3BAF21023177134003493FC /* LaunchScreen.storyboard */,
@@ -212,7 +221,10 @@
 			files = (
 				D3BAF20823177133003493FC /* AppDelegate.swift in Sources */,
 				D3782899231778EF006C2175 /* AccountViewController.swift in Sources */,
+				D3C5044F2318A4B4000A3441 /* AddViewController.swift in Sources */,
 				D378289B23177F33006C2175 /* TimelineViewController.swift in Sources */,
+				D3C504552318DBF8000A3441 /* AppUser.swift in Sources */,
+				D3C504512318D909000A3441 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
