@@ -1,8 +1,10 @@
 import UIKit
 import Firebase
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet var tableView: UITableView!
+    
     var user: User!
     var database: Firestore!
     var postArray: [Post] = []
@@ -10,6 +12,8 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         database = Firestore.firestore()
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,7 +26,7 @@ class TimelineViewController: UIViewController {
                     let post = Post(data: data)
                     self.postArray.append(post)
                 }
-                print(self.postArray)
+                self.tableView.reloadData()
             }
         }
     }
@@ -34,5 +38,15 @@ class TimelineViewController: UIViewController {
     
     @IBAction func toAddViewController() {
         performSegue(withIdentifier: "Add", sender: user)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        cell.textLabel?.text = postArray[indexPath.row].content
+        return cell
     }
 }
