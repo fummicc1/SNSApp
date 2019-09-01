@@ -7,6 +7,6 @@ struct AppUser {
     
     init(data: [String: Any]) {
         userID = data["userID"] as! String
-        userName = data["userName"] as! String
+        userName = data["userName"] as? String ?? "匿名"
     }
 }

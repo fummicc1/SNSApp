@@ -6,6 +6,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var tableView: UITableView!
     
     var user: User!
+    var me: AppUser!
     var database: Firestore!
     var postArray: [Post] = []
     
@@ -18,15 +19,25 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        database.collection("posts").getDocuments { (snapshot, error) in
-            if error == nil, let snapshot = snapshot {
+        database.collection("posts").getDocuments { (snapshots, error) in
+            if error == nil, let snapshots = snapshots {
                 self.postArray = []
-                for document in snapshot.documents {
+                for document in snapshots.documents {
                     let data = document.data()
                     let post = Post(data: data)
                     self.postArray.append(post)
                 }
                 self.tableView.reloadData()
+            }
+        }
+        
+        database.collection("users").document(user.uid).setData([
+            "userID": user.uid
+            ], merge: true)
+        
+        database.collection("users").document(user.uid).getDocument { (snapshot, error) in
+            if error == nil, let snapshot = snapshot, let data = snapshot.data() {
+                self.me = AppUser(data: data)
             }
         }
     }
@@ -47,6 +58,12 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         cell.textLabel?.text = postArray[indexPath.row].content
+        database.collection("users").document(postArray[indexPath.row].senderID).getDocument { (snapshot, error) in
+            if error == nil, let snapshot = snapshot, let data = snapshot.data() {
+                let appUser = AppUser(data: data)
+                cell.detailTextLabel?.text = appUser.userName
+            }
+        }
         return cell
     }
 }
