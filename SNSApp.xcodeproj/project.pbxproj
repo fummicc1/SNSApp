@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4CC02AB8B14D1B4938C47F7 /* Pods_SNSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F2C4AEF93FBBEB900718DC /* Pods_SNSApp.framework */; };
+		D368E860231CC7DA003D99B3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D368E85F231CC7DA003D99B3 /* SettingsViewController.swift */; };
 		D3782897231775B1006C2175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3782896231775B1006C2175 /* GoogleService-Info.plist */; };
 		D3782899231778EF006C2175 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3782898231778EF006C2175 /* AccountViewController.swift */; };
 		D378289B23177F33006C2175 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D378289A23177F33006C2175 /* TimelineViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		6284C015788C365447D9FC1E /* Pods-SNSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNSApp.debug.xcconfig"; path = "Target Support Files/Pods-SNSApp/Pods-SNSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		73F2C4AEF93FBBEB900718DC /* Pods_SNSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SNSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D368E85F231CC7DA003D99B3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D3782896231775B1006C2175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3782898231778EF006C2175 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D378289A23177F33006C2175 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				D3BAF20723177133003493FC /* AppDelegate.swift */,
 				D3C504542318DBF8000A3441 /* AppUser.swift */,
 				D3C504502318D909000A3441 /* Post.swift */,
+				D368E85F231CC7DA003D99B3 /* SettingsViewController.swift */,
 				D378289A23177F33006C2175 /* TimelineViewController.swift */,
 				D3BAF20E23177134003493FC /* Assets.xcassets */,
 				D3BAF21023177134003493FC /* LaunchScreen.storyboard */,
@@ -221,6 +224,7 @@
 			files = (
 				D3BAF20823177133003493FC /* AppDelegate.swift in Sources */,
 				D3782899231778EF006C2175 /* AccountViewController.swift in Sources */,
+				D368E860231CC7DA003D99B3 /* SettingsViewController.swift in Sources */,
 				D3C5044F2318A4B4000A3441 /* AddViewController.swift in Sources */,
 				D378289B23177F33006C2175 /* TimelineViewController.swift in Sources */,
 				D3C504552318DBF8000A3441 /* AppUser.swift in Sources */,
@@ -372,7 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2X6AD4W323;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SNSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,7 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2X6AD4W323;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SNSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

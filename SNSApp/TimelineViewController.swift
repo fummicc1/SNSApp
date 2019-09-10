@@ -5,7 +5,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
 
     @IBOutlet var tableView: UITableView!
     
-    var user: User!
     var me: AppUser!
     var database: Firestore!
     var postArray: [Post] = []
@@ -15,6 +14,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         database = Firestore.firestore()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let press = UILongPressGestureRecognizer(target: self, action: #selector(pressScreen))
+        press.minimumPressDuration = 1.5
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(press)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,11 +35,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
         
-        database.collection("users").document(user.uid).setData([
-            "userID": user.uid
+        database.collection("users").document(me.userID).setData([
+            "userID": me.userID
             ], merge: true)
         
-        database.collection("users").document(user.uid).getDocument { (snapshot, error) in
+        database.collection("users").document(me.userID).getDocument { (snapshot, error) in
             if error == nil, let snapshot = snapshot, let data = snapshot.data() {
                 self.me = AppUser(data: data)
             }
@@ -43,12 +47,22 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! AddViewController
-        destination.user = user
+        if segue.identifier == "Add" {
+            let destination = segue.destination as! AddViewController
+            destination.me = sender as! AppUser
+        } else if segue.identifier == "Settings" {
+            let destination = segue.destination as! SettingsViewController
+            destination.me = me
+        }
+    }
+    
+    @objc
+    func pressScreen() {
+        performSegue(withIdentifier: "Settings", sender: me)
     }
     
     @IBAction func toAddViewController() {
-        performSegue(withIdentifier: "Add", sender: user)
+        performSegue(withIdentifier: "Add", sender: me)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

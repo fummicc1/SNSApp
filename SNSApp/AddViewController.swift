@@ -5,7 +5,7 @@ class AddViewController: UIViewController {
     
     @IBOutlet var contentTextView: UITextView!
     
-    var user: User!
+    var me: AppUser!
     var database: Firestore!
     
     override func viewDidLoad() {
@@ -33,7 +33,7 @@ class AddViewController: UIViewController {
         saveDocument.setData([
             "content": content,
             "postID": saveDocument.documentID,
-            "senderID": user.uid,
+            "senderID": me.userID,
             "createdAt": FieldValue.serverTimestamp(),
             "updatedAt": FieldValue.serverTimestamp()
         ]) { error in
@@ -41,5 +41,10 @@ class AddViewController: UIViewController {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+    // 前の画面に戻るボタン
+    @IBAction func back() {
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -35,7 +35,7 @@ class AccountViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nextViewController = segue.destination as! TimelineViewController
         let user = sender as! User
-        nextViewController.user = user
+        nextViewController.me = AppUser(data: ["userID": user.uid])
     }
     
     @IBAction func registerAccount() {
