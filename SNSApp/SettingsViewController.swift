@@ -45,6 +45,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     // ログアウトボタンを押したときに呼ばれる。
     @IBAction func logout() {
-        
+        try? Auth.auth().signOut()
+        let accountViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! AccountViewController
+        present(accountViewController, animated: true, completion: nil)
     }
 }

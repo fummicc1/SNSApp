@@ -39,6 +39,15 @@
                                     <action selector="registerAccount" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVt-18-i5W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1d7-CK-Lr5">
+                                <rect key="frame" x="94" y="794" width="227" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="サインイン画面"/>
+                                <connections>
+                                    <segue destination="0Be-SC-Oqa" kind="presentation" id="vYR-KX-XQe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-14.492753623188406" y="-334.15178571428572"/>
         </scene>
         <!--Timeline View Controller-->
         <scene sceneID="y0a-8Z-PWD">
@@ -230,5 +239,53 @@
             </objects>
             <point key="canvasLocation" x="1647.826086956522" y="392.41071428571428"/>
         </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="NVv-mZ-waJ">
+            <objects>
+                <viewController id="0Be-SC-Oqa" customClass="SignInViewController" customModule="SNSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kv0-Qt-PO2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwl-Xz-7EG">
+                                <rect key="frame" x="47" y="150" width="321" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MgA-4o-JzD">
+                                <rect key="frame" x="47" y="232" width="321" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoq-dh-Gji">
+                                <rect key="frame" x="142" y="361" width="130" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="サインイン"/>
+                                <connections>
+                                    <action selector="tappedSignInButton" destination="0Be-SC-Oqa" eventType="touchUpInside" id="7kU-ef-jkB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4xn-IV-ITv"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="xwl-Xz-7EG" id="8aG-cj-Ab7"/>
+                        <outlet property="passwordTextField" destination="MgA-4o-JzD" id="Apa-hy-8r0"/>
+                        <segue destination="q7Y-ZA-Ska" kind="presentation" identifier="Timeline" id="eJ5-zt-Clu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gzr-fD-jbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14.492753623188406" y="391.74107142857139"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="k6Y-ZT-9PG"/>
+    </inferredMetricsTieBreakers>
 </document>

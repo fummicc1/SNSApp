@@ -12,6 +12,7 @@
 		D3782897231775B1006C2175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3782896231775B1006C2175 /* GoogleService-Info.plist */; };
 		D3782899231778EF006C2175 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3782898231778EF006C2175 /* AccountViewController.swift */; };
 		D378289B23177F33006C2175 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D378289A23177F33006C2175 /* TimelineViewController.swift */; };
+		D389CEA7232B418E00B4E4E9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D389CEA6232B418E00B4E4E9 /* SignInViewController.swift */; };
 		D3BAF20823177133003493FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BAF20723177133003493FC /* AppDelegate.swift */; };
 		D3BAF20D23177133003493FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BAF20B23177133003493FC /* Main.storyboard */; };
 		D3BAF20F23177134003493FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3BAF20E23177134003493FC /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		D3782896231775B1006C2175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3782898231778EF006C2175 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D378289A23177F33006C2175 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		D389CEA6232B418E00B4E4E9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D3BAF20423177133003493FC /* SNSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3BAF20723177133003493FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3BAF20C23177133003493FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				D3BAF20E23177134003493FC /* Assets.xcassets */,
 				D3BAF21023177134003493FC /* LaunchScreen.storyboard */,
 				D3BAF20B23177133003493FC /* Main.storyboard */,
+				D389CEA6232B418E00B4E4E9 /* SignInViewController.swift */,
 			);
 			path = SNSApp;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				D3782899231778EF006C2175 /* AccountViewController.swift in Sources */,
 				D368E860231CC7DA003D99B3 /* SettingsViewController.swift in Sources */,
 				D3C5044F2318A4B4000A3441 /* AddViewController.swift in Sources */,
+				D389CEA7232B418E00B4E4E9 /* SignInViewController.swift in Sources */,
 				D378289B23177F33006C2175 /* TimelineViewController.swift in Sources */,
 				D3C504552318DBF8000A3441 /* AppUser.swift in Sources */,
 				D3C504512318D909000A3441 /* Post.swift in Sources */,
